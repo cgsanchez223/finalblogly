@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tag</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Add tag</h1>
+
+    <form method="POST" action="/tags/new">
+
+        <div class="tagname">
+            <label for="name">Name</label>
+            <br>
+            <input type="text"
+                   class="nametag"
+                   id="name"
+                   name="name"
+                   placeholder="Tag Name">
+        </div>
+
+        <div class="tagposts">
+            {% for post in posts %}
+            <div>
+                <input class="tagcheck"
+                        type="checkbox"
+                        value="{{ post.id }}"
+                        id="post_{{ post.id }}"
+                        name="posts">
+                    <label class="taglabel" for="post_{{ post.id }}">{{ post.title }}</label>
+            </div>
+                {% endfor %}
+        </div>
+
+        <div class="edit">
+            <a href="/tags" class="btncancel">Cancel</a>
+            <button type="submit" class="addpost">Add</button>
+        </div>
+    </form>
+    
+</body>
+</html>

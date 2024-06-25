@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Edit a user</h1>
+    <form method="POST">
+
+        <div class="first">
+            <label for="first_name">First Name</label>
+            <br>
+            <input type="text"
+                   class="form"
+                   id="first_name"
+                   name="first_name"
+                   placeholder="First Name">
+        </div>
+
+        <div class="last">
+            <label for="last_name">Last Name</label>
+            <br>
+            <input type="text"
+                   class="form"
+                   id="last_name"
+                   name="last_name"
+                   placeholder="Last Name">
+        </div>
+
+        <div class="img">
+            <label for="image_url">Image URL</label>
+            <br>
+            <input type="text"
+                   class="form"
+                   id="image_url"
+                   name="image_url"
+                   placeholder="User image">
+        </div>
+
+        <div class="save">
+            <button type="submit">Save</button>
+        </div>
+        <br>
+
+        <div class="back">
+            <a href="/users">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>

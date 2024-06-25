@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ tag.name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>{{ tag.name }}</h1>
+
+    <ul>
+        {% for post in tag.posts %}
+        <li><a href="/posts/{{ post.id }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <form>
+        <form>
+            <button class="btnedit"
+                    formaction="/tags/{{ tag.id }}/edit"
+                    formmethod="GET">Edit</button>
+
+            <button class="btndelete"
+                    formaction="/tags/{{ tag.id }}/delete"
+                    formmethod="POST">Delete</button>
+        </form>
+    </form>
+    
+</body>
+</html>

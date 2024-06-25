@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.full_name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+ <div class="row">
+    {% if user.image_url %}
+    <div class="image">
+        <img src="{{ user.image_url }}"
+             alt="{{ user.full_name }}"
+             class="img">
+    </div>
+    {% endif %}
+
+    <div class="column">
+        <h1>{{ user.full_name }}</h1>
+
+        <form>
+            <button class="btnedit"
+                    formaction="/users/{{ user.id }}/edit"
+                    formmethod="GET">Edit</button>
+
+            <button class="btndelete"
+                    formaction="/users/{{ user.id }}/delete"
+                    formmethod="POST">Delete</button>
+        </form>
+    </div>
+
+    <h2>Posts</h2>
+
+    <ul>
+        {% for post in user.posts %}
+        <li>
+            <a href="/posts/{{ post.id }}">{{ post.title }}</a>
+            <small> {{ post.friendly_date }}</small>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="/users/{{ user.id }}/posts/new" class="addpost">Add Post</a></p>
+ </div>
+
+
+</body>
+</html>

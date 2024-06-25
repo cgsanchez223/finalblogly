@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Edit Post</h1>
+
+    <form method="POST" action="/posts/{{ post.id }}/edit">
+
+        <div class="title">
+            <label for="title">Title</label>
+            <br>
+            <input type="text"
+                   class="titlebox"
+                   id="title"
+                   name="title"
+                   placeholder="Title"
+                   value="{{ post.title }}">
+        </div>
+
+        <div class="content">
+            <label for="content">Content</label>
+            <br>
+            <textarea
+                class="contentbox"
+                id="content"
+                name="content"
+                placeholder="Post here">{{ post.content }}</textarea>
+        </div>
+
+        <div class="formtags">
+            {% for tag in tags %}
+            <div>
+                <input class="tagcheck"
+                   type="checkbox"
+                   value="{{ tag.id }}"
+                   id="tag_{{ tag.id }}"
+                   {% if tag in post.tags %}checked{% endif %}
+                   name="tags">
+                <label class="taglabel" for="tag_{{ tag.id }}">{{ tag.name }}</label>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="edit">
+            <a href="/users/{{ post.user_id }}" class="btncancel">Cancel</a>
+            <button type="submit" class="addpost">Edit</button>
+        </div>
+    </form>
+</body>
+</html>

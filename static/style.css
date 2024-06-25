@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+.introbutton button{
+    border-radius: 10%;
+    background-color: gray;
+    border: 2px solid black;
+}
+
+.introbutton a {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+}
+
+.first{
+    padding-bottom: 20px;
+}
+
+.first input {
+    margin-top: 5px;
+}
+
+.last {
+    padding-bottom: 20px;
+}
+
+.last input {
+    margin-top: 5px;
+}
+
+.img {
+    padding-bottom: 20px;
+}
+
+.img input {
+    margin-top: 5px;
+}
+
+.btnedit {
+    border-radius: 35%;
+    background-color: rgb(43, 54, 177);
+    color: white;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 11px;
+}
+
+.btndelete {
+    border-radius: 25%;
+    background-color: rgb(186, 23, 23);
+    color: white;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 11px;
+}
+
+.addpost {
+    border-radius: 25%;
+    background-color: rgb(54, 71, 255);
+    color: white;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btncancel {
+    border-radius: 20%;
+    background-color: rgba(75, 235, 86, 0);
+    color: rgb(26, 9, 9);
+    border: 2px solid rgb(35, 194, 194);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+img {
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+}
+
+.save button{
+    border-radius: 35%;
+    background-color: rgb(75, 235, 86);
+    color: rgb(26, 9, 9);
+    border: 2px solid rgb(244, 217, 217);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 11px;
+}
+
+.back a {
+    border-radius: 20%;
+    background-color: rgba(75, 235, 86, 0);
+    color: rgb(26, 9, 9);
+    border: 2px solid rgb(35, 194, 194);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+
+.title, .content {
+    padding-bottom: 20px;
+    width: 70%;
+}
+
+.titlebox {
+    width: 20%;
+}
+
+.contentbox {
+    padding-bottom: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+.addpost {
+    border-radius: 35%;
+    background-color: rgb(44, 248, 29);
+    color: black;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 11px;
+}
+
+.addtag {
+    border-radius: 20%;
+    background-color: rgb(35, 194, 194);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(15, 25, 25, 0.512);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 6px;
+    margin-top: 20px;
+}
+
+.navbartop {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    padding-right: 100%;
+    font-size: 40px;
+    background-color: hsla(187, 51%, 50%, 0.701);
+    color: hsl(285, 35%, 46%);
+    text-align: center;
+    width: 68%;
+    border: gray solid;
+    margin-top: 30px;
+}
+
